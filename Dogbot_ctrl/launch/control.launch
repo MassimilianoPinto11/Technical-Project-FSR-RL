@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="dogbot_ctrl" type="dogbot_ctrl_node" name="dogbot_ctrl_node"/>
+<node pkg="qrcode_scanner" type="qrcode_scanner" name="qrcode_scanner"/>
+
+
+
+</launch>
+
