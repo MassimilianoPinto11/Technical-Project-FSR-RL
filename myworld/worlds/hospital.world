@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+	 <scene>
+	    <shadows>0</shadows>
+  </scene>
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>20</iters>
+          <sor>1.0</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.0</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+	
+
+    <include>
+      <uri>model://floor</uri>
+			<name>floor</name>
+			<pose>0 0 0 0 0 0 </pose>
+    </include>
+
+	<include>
+  <uri>model://w1</uri>
+  <name>w1</name>
+  <pose>-0.5 -4 0 0 0 0 </pose>
+ </include>
+
+		
+		<include>
+      <uri>model://id2</uri>
+			<name>id2</name>
+      <pose>-4 0.9 1 -1.57 0.0 3.14</pose>
+    </include>
+
+		<include>
+      <uri>model://id1</uri>
+			<name>id1</name>
+      <pose>-2 -8.9 1 1.57 0.0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model://id3</uri>
+			<name>id3</name>
+      <pose>6.9 -1 1 1.57 0.0 -1.57</pose>
+    </include>
+
+    <include>
+      <uri>model://construction_cone</uri>
+			<name>construction_cone</name>
+      <pose>0 -3 0 0 0.0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://construction_cone</uri>
+			<name>construction_cone2</name>
+      <pose>-3 -2 0 0 0.0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://construction_cone</uri>
+			<name>construction_cone3</name>
+      <pose>3 -2 0 0 0.0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://postbox</uri>
+			<name>postbox</name>
+      <pose>-4 -5.5 0 0 0.0 3.14</pose>
+    </include>
+
+    <include>
+      <uri>model://oak_tree</uri>
+			<name>oak_tree</name>
+      <pose>3 -6 0 0 0.0 3.14</pose>
+    </include>
+		
+
+
+<light type="point" name="point">
+      <pose>-2.2 -2.2 2 0 0 0</pose>
+      <diffuse>127 127 127 255</diffuse>
+      <specular>25 25 25 255</specular>
+      <attenuation>
+        <range>20</range>
+        <linear>0.01</linear>
+        <constant>0.5</constant>
+        <quadratic>0.00</quadratic>
+      </attenuation>
+      <cast_shadows>false</cast_shadows>
+    </light>
+
+
+  </world>
+</sdf>
